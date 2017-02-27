@@ -4,9 +4,9 @@ $(document).ready(function() {
 
     function myMovies(movies) {
         movies.forEach(function(movie, i) {
-            $('.theMovies').append($(`<div class="movieList "><h4 class="title movie${i}"> ${movie.title} </h4><h4 class="director">  ${movie.director}
-                </h4><h4 class="year"> ${movie.year}  </h4><h4 class="rating">  ${movie.rating}
-                </h4><button id=${i} class="pick${i} delBtn btn btn-primary"type="button" name="button">Delete Movie</button><button class="editBtn btn btn-primary"type="button" name="button">Edit</button></div>`))
+            $('.theMovies').append($(`<div class="movieList"><a class="showMe"><h4 class="title">${movie.title}</h4></a><h4 class="director"> ${movie.director}
+                </h4><h4 class="year">${movie.year}  </h4><h4 class="rating"> ${movie.rating}
+                </h4><button class="delBtn btn btn-primary"type="button" name="button">Delete Movie</button><button class="editBtn btn btn-primary"type="button" name="button">Edit</button></div>`))
         })
     }
     var myNewMovie = {}
@@ -26,40 +26,40 @@ $(document).ready(function() {
             })
             .then(response => {
                 console.log(response);
+                window.location.reload()
             })
             .catch(err => {
                 console.log(err);
             })
-            window.location.reload()
     })
 
-    $('.delBtn').click(function() {
-        $('.delBtn').html('<button id="btnNew">Add Button</button>');
-    });
-
     $('body').on('click', '.delBtn', function() {
-        var id = this.id
-        var myClass = ".movie" + id
-        var deleteMovie = $(myClass).text().trim()
+        var deleteMovie = $(this).parent().find('.title').text().trim()
         $.ajax({
           url:`/movies/${deleteMovie}`,
           method: 'DELETE',
           crossDomain: true,
-
           contentType: "application/json; charset=utf-8"
         })
-        window.location.reload()
-
+        .then(response => {
+            console.log(response);
+            window.location.reload()
+        })
+        .catch(err => {
+            console.log(err);
+        })
     });
 
-
-
-
-
-
-    $('.editBtn').on('click', function(event) {
-
+    $('body').on('click', '.editBtn', function() {
+      var editTitle = $(this).parent().find('.title').text().trim()
+      window.location = "/edit.html?title="+editTitle
     })
+
+    $('body').on('click', '.showMe', function() {
+      var editTitle = $(this).parent().find('.title').text().trim()
+      window.location = "/show.html?title="+editTitle
+    })
+
 
 
 
