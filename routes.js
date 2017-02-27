@@ -23,6 +23,22 @@ router.post('/movies', (req, res)=> {
   })
 })
 
+router.delete('/movies/:title', (req, res) => {
+    const thisOne = req.params.title;
+    db.get('movies')
+        .remove({
+            title: thisOne
+        })
+        .write()
+        .then(deleteMovie => {
+          console.log("here" , deleteMovie);
+            res.status(204).send("DID IT")
+        })
+        .catch(err => {
+            console.log(err);
+        })
+})
+
 
 // router.get('/movies/:title', (req, res) => {
 //   const movieTitle = req.params.title;

@@ -21,3 +21,8 @@ header {
 .movieList {
   display: flex; justify-content: space-between;
 }
+
+
+.selected {
+  background-color: red;
+}
