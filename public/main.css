@@ -1,0 +1,23 @@
+header {
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.myMovies {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+
+.myBtn {
+  height: 30px;
+
+}
+.movieList {
+  display: flex; justify-content: space-between;
+}
