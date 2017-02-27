@@ -4,7 +4,7 @@ const routes = require('./routes');
 const bodyParser = require('body-parser');
 const PORT = 3500;
 
-app.use(express.static('public', {index:'public/home.html'}))
+app.use(express.static('public', 'public/home.html'))
 app.use(bodyParser.json());
 app.use('/', routes);
 
