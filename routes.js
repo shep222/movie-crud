@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
@@ -5,6 +6,9 @@ const fileAsync = require('lowdb/lib/storages/file-async');
 const db = low('database/movies.json', {
     storage: fileAsync
 });
+router.get('/', (req, res) => {
+  res.render('public/home.html')
+})
 
 router.get('/movies', (req, res) => {
     const movies = db.get('movies');
