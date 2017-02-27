@@ -8,6 +8,6 @@ app.use(bodyParser.json());
 app.use('/', routes);
 
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || PORT, function() {
   console.log("Listening on port " + PORT + "!  Press ^C to quit" );
 });
