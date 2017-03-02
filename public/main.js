@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     function myMovies(movies) {
       movies.forEach(function (movie) {
-        $('.betterDisplay').append($(`<article class="eachMovie col-md-3 col-sm-6">
+        $('.betterDisplay').append($(`<article class="eachMovie col-md-4 col-sm-6">
           <a class="showMe"><h2 class="title">${movie.title}</h2></a>
           <img class="imageStyle" src="${movie.url}" alt="">
           <h4 class="director">Director: ${movie.director}</h4>

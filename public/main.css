@@ -2,10 +2,10 @@ header {
   height: 100px;
   background-image: url('filmHeader.jpeg');
   background-repeat: repeat;
-  color: white;
 }
 h1 {
-  color: white;
+  margin: 0;
+
 }
 
 .top {
@@ -41,7 +41,7 @@ h1 {
 }
 
 .landingPage {
-  height: 600px;
+  height: 800px;
   background-image: url('Red-Curtain.jpg');
 }
 
@@ -49,6 +49,14 @@ h1 {
   color: white;
   display: flex;
   justify-content: space-around;
+  padding-top: 50px;
+}
+
+#mainID {
+  color: white;
+}
+#showH1 {
+  color: black;
 }
 .landingLink {
   margin-top: 300px;
@@ -60,11 +68,17 @@ h1 {
 }
 
 .betterDisplay {
-  margin-left: 20px;
-  margin-right: 20px;
+
+  margin-left: 7%;
+  /*margin-right: 20px;*/
 }
 
 .backgroundIndex {
+  background-image: url('Red-Curtain.jpg');
+  background-size: cover;
+}
+.backgroundNew {
+  height: 600px;
   background-image: url('Red-Curtain.jpg');
   background-size: cover;
 }
@@ -87,9 +101,17 @@ h1 {
   background-color: white;
 
 }
-.showPage {
-margin-left: 50px;
+.showPage, .addLayout, .editLayout {
+margin-left: 40%;
 }
-.addLayout {
-  margin-left: 50px;
+
+.addLayout, .editLayout, .showPage {
+padding-top: 60px;
+ background-color: white;
+  width: 300px;
+  padding: 20px;
+  border: double;
+}
+.indexH1 {
+  color: white;
 }
