@@ -10,5 +10,5 @@ app.use('/', routes);
 
 
 app.listen(process.env.PORT || PORT, function() {
-  console.log("Listening on port " + PORT + "!  Press ^C to quit" );
+  console.log("Movie App Running on port " + PORT + "!  Press ^C to quit" );
 });

@@ -60,7 +60,7 @@ router.delete('/movies/:title', (req, res) => {
         })
         .write()
         .then(deleteMovie => {
-            console.log("here", deleteMovie);
+            
             res.status(204).send("DID IT")
         })
         .catch(err => {

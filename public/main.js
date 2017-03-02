@@ -3,12 +3,19 @@ $(document).ready(function() {
     $.get('/movies').then(myMovies);
 
     function myMovies(movies) {
-        movies.forEach(function(movie, i) {
-            $('.theMovies').append($(`<div class="movieList"><a class="showMe"><h4 class="title">${movie.title}</h4></a><h4 class="director"> ${movie.director}
-                </h4><h4 class="year">${movie.year}  </h4><h4 class="rating"> ${movie.rating}
-                </h4><button class="delBtn btn btn-primary"type="button" name="button">Delete Movie</button><button class="editBtn btn btn-primary"type="button" name="button">Edit</button></div>`))
-        })
+      movies.forEach(function (movie) {
+        $('.betterDisplay').append($(`<article class="eachMovie col-md-3 col-sm-6">
+          <a class="showMe"><h2 class="title">${movie.title}</h2></a>
+          <img class="imageStyle" src="${movie.url}" alt="">
+          <h4 class="director">Director: ${movie.director}</h4>
+          <h4 class="year">Year: ${movie.year}</h4>
+          <h4 class="rating">My Rating: ${movie.rating}</h4>
+          <button class="delBtn btn btn-primary"type="button" name="button">Delete Movie</button>
+          <button class="editBtn btn btn-primary"type="button" name="button">Edit</button>
+        </article>`))
+      })
     }
+
     var myNewMovie = {}
     $('.addMovie').on('click', function(event) {
         myNewMovie.title = $('.newTitle').val()
@@ -59,13 +66,4 @@ $(document).ready(function() {
       var editTitle = $(this).parent().find('.title').text().trim()
       window.location = "/show.html?title="+editTitle
     })
-
-
-
-
-
-
-
-
-
 })

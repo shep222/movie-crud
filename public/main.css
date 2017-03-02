@@ -1,6 +1,10 @@
 header {
   height: 100px;
-  background-color: black;
+  background-image: url('filmHeader.jpeg');
+  background-repeat: repeat;
+  color: white;
+}
+h1 {
   color: white;
 }
 
@@ -16,7 +20,11 @@ header {
 
 .myBtn {
   height: 30px;
+}
 
+.toAddBtn {
+  height: 30px;
+  margin-top: 25px;
 }
 .movieList {
   display: flex; justify-content: space-between;
@@ -25,4 +33,63 @@ header {
 
 .selected {
   background-color: red;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landingPage {
+  height: 600px;
+  background-image: url('Red-Curtain.jpg');
+}
+
+.landingTitle {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.landingLink {
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.betterDisplay {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.backgroundIndex {
+  background-image: url('Red-Curtain.jpg');
+  background-size: cover;
+}
+.imageStyle {
+  height: 250px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.headerImg {
+
+}
+
+.eachMovie {
+  width: 300px;
+  border: double;
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+  background-color: white;
+
+}
+.showPage {
+margin-left: 50px;
+}
+.addLayout {
+  margin-left: 50px;
 }
