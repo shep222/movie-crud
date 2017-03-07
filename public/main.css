@@ -96,7 +96,7 @@ h1 {
 
 .eachMovie {
   width: 300px;
-  border: solid;
+  border: double;
   padding: 10px;
   margin-left: 5px;
   margin-bottom: 30px;
