@@ -2,7 +2,6 @@ $(document).ready(function() {
 $.get('/movies/'+location.search.slice(7)).then(myEditedMovie);
 
 function myEditedMovie (movie) {
-  console.log(movie.title);
   $('.editTitle').val(movie.title)
   $('.editYear').val(movie.year)
   $('.editDirector').val(movie.director)
